@@ -1,25 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  Home,
+  Navbar,
+  New,
+  NewsItem,
+  Contact,
+  Product,
+  ProductItem,
+  Bread,
+  Cake,
+  Cookie,
+  Moon,
+  MoonItem,
+} from "./components";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Route exact path="/" component={Home} />
+      <Switch>
+        <Route exact path="/product" component={Product} />
+        <Route exact path="/product/bread" component={Bread} />
+        <Route exact path="/product/cake" component={Cake} />
+        <Route exact path="/product/cookie" component={Cookie} />
+        <Route exact path="/product/:id" component={ProductItem} />
+      </Switch>
+      <Route exact path="/latest" component={New} />
+      <Route path="/latest/:id" component={NewsItem} />
+      <Route path="/contact" component={Contact} />
+      <Route exact path="/moon" component={Moon} />
+      <Route exact path="/moon/:id" component={MoonItem} />
+    </Router>
   );
 }
 
