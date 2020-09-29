@@ -1,0 +1,12 @@
+export { default as Home } from "./Home/Home";
+export { default as Navbar } from "./Navbar/Navbar";
+export { default as New } from "./News/New";
+export { default as NewsItem } from "./News/NewsItem/NewsItem";
+export { default as Contact } from "./Contact/Contact";
+export { default as Product } from "./Product/Product";
+export { default as ProductItem } from "./Product/Item/ProductItem";
+export { default as Bread } from "./Product/Bread/Bread";
+export { default as Cake } from "./Product/Cake/Cake";
+export { default as Cookie } from "./Product/Cookie/Cookie";
+export { default as Moon } from "./Moon/Moon";
+export { default as MoonItem } from "./Moon/MoonItem";

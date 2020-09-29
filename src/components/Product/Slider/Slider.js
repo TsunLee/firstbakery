@@ -1,0 +1,109 @@
+import React from "react";
+import Slider from "react-slick";
+import { Link } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import {
+  Title,
+  Card,
+  Image,
+  CardTitle,
+  CardPrice,
+  Line,
+  Div,
+} from "./Slider.element.js";
+
+const Sliders = ({ bread, cake, cookie }) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
+
+  return (
+    <>
+      <Line>
+        <Title>美味麵包</Title>
+        <Slider {...settings}>
+          {[...bread].map((breads, index) => (
+            <Div>
+              <Card>
+                <Link
+                  to={{
+                    pathname: `/product/${breads._id}`,
+                    category: "breads",
+                  }}
+                >
+                  <Image src={breads.img} />
+                </Link>
+                <CardTitle
+                  to={{
+                    pathname: `/product/${breads._id}`,
+                    category: "breads",
+                  }}
+                >
+                  {breads.title}
+                </CardTitle>
+                <CardPrice>{breads.price}</CardPrice>
+              </Card>
+            </Div>
+          ))}
+        </Slider>
+      </Line>
+      <Line>
+        <Title>人氣蛋糕</Title>
+        <Slider {...settings}>
+          {[...cake].map((cakes, index) => (
+            <Div>
+              <Card>
+                <Link
+                  to={{ pathname: `/product/${cakes._id}`, category: "cakes" }}
+                >
+                  <Image src={cakes.img} />
+                </Link>
+                <CardTitle
+                  to={{ pathname: `/product/${cakes._id}`, category: "cakes" }}
+                >
+                  {cakes.title}
+                </CardTitle>
+                <CardPrice>{cakes.price}</CardPrice>
+              </Card>
+            </Div>
+          ))}
+        </Slider>
+      </Line>
+      <Line>
+        <Title>療癒餅乾</Title>
+        <Slider {...settings}>
+          {[...cookie].map((cookies, index) => (
+            <Div>
+              <Card>
+                <Link
+                  to={{
+                    pathname: `/product/${cookies._id}`,
+                    category: "cookies",
+                  }}
+                >
+                  <Image src={cookies.img} />
+                </Link>
+                <CardTitle
+                  to={{
+                    pathname: `/product/${cookies._id}`,
+                    category: "cookies",
+                  }}
+                >
+                  {cookies.title}
+                </CardTitle>
+                <CardPrice>{cookies.price}</CardPrice>
+              </Card>
+            </Div>
+          ))}
+        </Slider>
+      </Line>
+    </>
+  );
+};
+
+export default Sliders;
