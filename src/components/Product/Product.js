@@ -10,7 +10,7 @@ const Product = () => {
   const [cookie, setCookie] = useState("");
   useEffect(() => {
     axios
-      .get("https://first-bakery.herokuapp.com/breads")
+      .get("https://first-bakery.herokuapp.com/products/breads")
       .then(function (response) {
         let data = response.data;
         setBread(data);
@@ -20,7 +20,7 @@ const Product = () => {
         console.log(error);
       });
     axios
-      .get("https://first-bakery.herokuapp.com/cakes")
+      .get("https://first-bakery.herokuapp.com/products/cakes")
       .then(function (response) {
         let data = response.data;
         setCake(data);
@@ -30,7 +30,7 @@ const Product = () => {
         console.log(error);
       });
     axios
-      .get("https://first-bakery.herokuapp.com/cookies")
+      .get("https://first-bakery.herokuapp.com/products/cookies")
       .then(function (response) {
         let data = response.data;
         setCookie(data);

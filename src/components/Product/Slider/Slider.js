@@ -33,7 +33,6 @@ const Sliders = ({ bread, cake, cookie }) => {
                 <Link
                   to={{
                     pathname: `/product/${breads._id}`,
-                    category: "breads",
                   }}
                 >
                   <Image src={breads.img} />
@@ -41,7 +40,6 @@ const Sliders = ({ bread, cake, cookie }) => {
                 <CardTitle
                   to={{
                     pathname: `/product/${breads._id}`,
-                    category: "breads",
                   }}
                 >
                   {breads.title}
@@ -58,14 +56,10 @@ const Sliders = ({ bread, cake, cookie }) => {
           {[...cake].map((cakes, index) => (
             <Div>
               <Card>
-                <Link
-                  to={{ pathname: `/product/${cakes._id}`, category: "cakes" }}
-                >
+                <Link to={{ pathname: `/product/${cakes._id}` }}>
                   <Image src={cakes.img} />
                 </Link>
-                <CardTitle
-                  to={{ pathname: `/product/${cakes._id}`, category: "cakes" }}
-                >
+                <CardTitle to={{ pathname: `/product/${cakes._id}` }}>
                   {cakes.title}
                 </CardTitle>
                 <CardPrice>{cakes.price}</CardPrice>
@@ -83,7 +77,6 @@ const Sliders = ({ bread, cake, cookie }) => {
                 <Link
                   to={{
                     pathname: `/product/${cookies._id}`,
-                    category: "cookies",
                   }}
                 >
                   <Image src={cookies.img} />
@@ -91,7 +84,6 @@ const Sliders = ({ bread, cake, cookie }) => {
                 <CardTitle
                   to={{
                     pathname: `/product/${cookies._id}`,
-                    category: "cookies",
                   }}
                 >
                   {cookies.title}

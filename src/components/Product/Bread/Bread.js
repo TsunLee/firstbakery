@@ -17,7 +17,7 @@ const Bread = () => {
 
   useEffect(() => {
     axios
-      .get("https://first-bakery.herokuapp.com/breads")
+      .get("https://first-bakery.herokuapp.com/products/breads")
       .then(function (response) {
         let data = response.data;
         setBread(data);
@@ -39,7 +39,6 @@ const Bread = () => {
             <CardTitle
               to={{
                 pathname: `/product/${breads._id}`,
-                category: "breads",
               }}
               id={breads._id}
             >
@@ -50,7 +49,6 @@ const Bread = () => {
               id={breads._id}
               to={{
                 pathname: `/product/${breads._id}`,
-                category: "breads",
               }}
             >
               READ MORE {`->`}

@@ -17,7 +17,7 @@ const Bread = () => {
 
   useEffect(() => {
     axios
-      .get("https://first-bakery.herokuapp.com/cookies")
+      .get("https://first-bakery.herokuapp.com/products/cookies")
       .then(function (response) {
         let data = response.data;
         setCookie(data);
@@ -39,7 +39,6 @@ const Bread = () => {
             <CardTitle
               to={{
                 pathname: `/product/${cookies._id}`,
-                category: "cookies",
               }}
               id={cookies._id}
             >
@@ -50,7 +49,6 @@ const Bread = () => {
               id={cookies._id}
               to={{
                 pathname: `/product/${cookies._id}`,
-                category: "cookies",
               }}
             >
               READ MORE {`->`}
