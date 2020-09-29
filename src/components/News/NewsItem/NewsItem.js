@@ -22,9 +22,7 @@ const NewsItem = (props) => {
   const Time = new Date().toLocaleString();
   useEffect(() => {
     axios
-      .get(
-        `hhttps://first-bakery.herokuapp.com/events/${props.match.params.id}`
-      )
+      .get(`https://first-bakery.herokuapp.com/events/${props.match.params.id}`)
       .then(function (response) {
         let data = response.data;
         setItem(data);

@@ -39,6 +39,7 @@ export const Price = styled.div`
   font-size: 1.5vw;
   margin-top: 10vw;
   margin-left: 2vw;
+
   @media screen and (max-width: 710px) {
     margin-top: 6vw;
   }
@@ -49,6 +50,7 @@ export const ItemPrice = styled.div`
   margin-top: 0.5vw;
   color: #d49e6a;
   text-shadow: 0.5px 0.5px 0.5px #edb177;
+  font-family: "Dancing Script", cursive;
 `;
 
 export const ItemText = styled.div`

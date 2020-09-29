@@ -62,6 +62,7 @@ export const ItemPrice = styled.div`
   text-decoration: none;
   color: #838383;
   font-weight: 400;
+  font-family: "Dancing Script", cursive;
 `;
 
 export const Footer = styled.div`

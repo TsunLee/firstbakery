@@ -47,6 +47,7 @@ export const CardPrice = styled.h3`
   margin: 3vw 0 1vw 10px;
   padding: auto;
   text-shadow: 0.5px 0.5px 0.5px #edb177;
+  font-family: "Dancing Script", cursive;
 `;
 
 export const Line = styled.div`

@@ -46,6 +46,7 @@ export const ItemPrice = styled.div`
   margin-top: 0.5vw;
   color: #d49e6a;
   text-shadow: 0.5px 0.5px 0.5px #edb177;
+  font-family: "Dancing Script", cursive;
   @media screen and (max-width: 640px) {
     margin-bottom: 4vw;
   }
