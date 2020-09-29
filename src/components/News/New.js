@@ -17,7 +17,7 @@ const New = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/events")
+      .get("https://first-bakery.herokuapp.com/events")
       .then(function (response) {
         let data = response.data;
         setLatest(data);

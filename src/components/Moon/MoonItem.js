@@ -19,7 +19,7 @@ const MoonItem = (props) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/moons/${props.match.params.id}`)
+      .get(`https://first-bakery.herokuapp.com/moons/${props.match.params.id}`)
       .then(function (response) {
         let data = response.data;
         setItem(data);

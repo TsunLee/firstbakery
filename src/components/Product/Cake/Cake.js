@@ -17,7 +17,7 @@ const Bread = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/cakes")
+      .get("https://first-bakery.herokuapp.com/cakes")
       .then(function (response) {
         let data = response.data;
         setCake(data);

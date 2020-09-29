@@ -17,7 +17,7 @@ const Bread = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/cookies")
+      .get("https://first-bakery.herokuapp.com/cookies")
       .then(function (response) {
         let data = response.data;
         setCookie(data);
