@@ -2,9 +2,11 @@ import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 body{
-  background: #e8ecf1
-}
-`;
+    background-image:url("https://images.unsplash.com/photo-1547104442-044448b73426?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center}
+  ;`;
 
 export const Container = styled.div`
   display: flex;
