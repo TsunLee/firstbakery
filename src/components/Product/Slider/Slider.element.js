@@ -52,4 +52,7 @@ export const CardPrice = styled.h3`
 
 export const Line = styled.div`
   margin-bottom: 7vw;
+  button {
+    color: #5c636e;
+  }
 `;
