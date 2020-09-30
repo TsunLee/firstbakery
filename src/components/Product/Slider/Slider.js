@@ -14,6 +14,28 @@ import {
   Div,
 } from "./Slider.element.js";
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", color: "#5c636e" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", color: "#5c636e" }}
+      onClick={onClick}
+    />
+  );
+}
+
 const Sliders = ({ bread, cake, cookie }) => {
   const settings = {
     dots: true,
@@ -21,6 +43,8 @@ const Sliders = ({ bread, cake, cookie }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
   };
 
   return (
