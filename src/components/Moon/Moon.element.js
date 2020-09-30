@@ -60,7 +60,7 @@ export const ItemPrice = styled.div`
   margin-bottom: 20px;
   font-weight: 300;
   text-decoration: none;
-  color: #838383;
+  color: #d49e6a;
   font-weight: 400;
   font-family: "Dancing Script", cursive;
 `;
