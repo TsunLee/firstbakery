@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from "./Sidebar";
 import axios from "axios";
-import { Container, Menu, Bar, Footer } from "./Product.element";
+import { Container, Menu, Bar, Footer, GlobalStyle } from "./Product.element";
 import Sliders from "./Slider/Slider";
 
 const Product = () => {
@@ -43,6 +43,7 @@ const Product = () => {
 
   return (
     <>
+      <GlobalStyle />
       <Bar>精選麵包</Bar>
       <Container>
         <Sidebar />
