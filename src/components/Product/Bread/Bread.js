@@ -17,7 +17,7 @@ const Bread = () => {
 
   useEffect(() => {
     axios
-      .get("https://first-bakery.herokuapp.com/products/breads")
+      .get("https://bakery-data.herokuapp.com/products/breads")
       .then(function (response) {
         let data = response.data;
         setBread(data);

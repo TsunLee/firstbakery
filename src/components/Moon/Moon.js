@@ -16,7 +16,7 @@ const Moon = () => {
 
   useEffect(() => {
     axios
-      .get("https://first-bakery.herokuapp.com/moons")
+      .get("https://bakery-data.herokuapp.com/moons")
       .then(function (response) {
         let data = response.data;
         setMoonCake(data);

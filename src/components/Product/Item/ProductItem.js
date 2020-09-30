@@ -20,7 +20,7 @@ const ProductItem = (props) => {
   useEffect(() => {
     axios
       .get(
-        `https://first-bakery.herokuapp.com/products/${props.match.params.id}`
+        `https://bakery-data.herokuapp.com/products/${props.match.params.id}`
       )
       .then(function (response) {
         let data = response.data;
